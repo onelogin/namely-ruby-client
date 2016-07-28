@@ -3,14 +3,12 @@ module Namely
     attr_reader :endpoint
 
     def initialize(options)
-      @access_token = options.fetch(:access_token)
-      @endpoint = options.fetch(:endpoint)
-      @subdomain = options.fetch(:subdomain)
-      @paged = options.fetch(:paged, false)
+      @options = options
+      @limit = options[:limit]
     end
 
     def json_index
-      paged ? json_index_paged : json_index_all
+      get("/#{endpoint}", limit: limit, after: after)[resource_name]
     end
 
     def json_show(id)
@@ -33,28 +31,35 @@ module Namely
       put("/#{endpoint}/#{id}", endpoint => [changes])
     end
 
+    attr_writer :limit, :after
+
     private
 
-    def json_index_all
-      get("/#{endpoint}", limit: :all)[resource_name]
+    attr_reader :options
+
+    def access_token
+      options[:access_token]
     end
 
-    def json_index_paged
-      Enumerator.new do |y|
-        params = {}
-
-        loop do
-          objects = get("/#{endpoint}", params)[resource_name]
-          break if objects.empty?
-
-          objects.each { |o| y << o }
-
-          params[:after] = objects.last["id"]
-        end
-      end
+    def subdomain
+      options[:subdomain]
     end
 
-    attr_reader :access_token, :subdomain, :paged
+    def endpoint
+      options[:endpoint]
+    end
+
+    def limit
+      @limit || :all
+    end
+
+    def after
+      @after = options.fetch(:after, 0)
+    end
+
+    def paged?
+      @limit
+    end
 
     def resource_name
       endpoint.split("/").last

@@ -14,6 +14,14 @@ module Namely
     #
     # @return [Array<Model>]
     def all
+      resource_gateway.limit = :all
+      resource_gateway.after = 0
+      resource_gateway.json_index.map { |model| build(model) }
+    end
+
+    def limit(options = {})
+      resource_gateway.limit = options.fetch(:limit, :all)
+      resource_gateway.after = options.fetch(:after, 0)
       resource_gateway.json_index.map { |model| build(model) }
     end
 
