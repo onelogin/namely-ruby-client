@@ -19,6 +19,7 @@ VCR.configure do |config|
     "CLIENT_ID",
     "CLIENT_REDIRECT_URI",
     "CLIENT_SECRET",
+    "LIMIT",
     "TEST_ACCESS_TOKEN",
     "TEST_REFRESH_TOKEN",
     "TEST_SUBDOMAIN",
@@ -29,4 +30,8 @@ VCR.configure do |config|
       ENV.fetch(env_var)
     end
   end
+end
+
+Namely.configure do |config|
+  config.limit = ENV.fetch("LIMIT")
 end

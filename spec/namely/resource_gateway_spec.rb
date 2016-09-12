@@ -9,6 +9,10 @@ describe Namely::ResourceGateway do
     ENV.fetch("TEST_SUBDOMAIN")
   end
 
+  def limit
+    Namely.configuration.limit
+  end
+
   def gateway
     @gateway ||= Namely::ResourceGateway.new(
       access_token: access_token,
@@ -57,15 +61,15 @@ describe Namely::ResourceGateway do
 
       it "emits an enumerator that represents all paged items" do
         stub_request(:get, "https://#{subdomain}.namely.com/api/v1/widgets").
-          with(query: { access_token: access_token }).
+          with(query: { access_token: access_token, limit: limit }).
           to_return(body: { widgets: [ id: "123-456" ] }.to_json)
 
         stub_request(:get, "https://#{subdomain}.namely.com/api/v1/widgets").
-          with(query: { access_token: access_token, after: "123-456" }).
+          with(query: { access_token: access_token, limit: limit, after: "123-456" }).
           to_return(body: { widgets: [ id: "456-789" ] }.to_json)
 
         stub_request(:get, "https://#{subdomain}.namely.com/api/v1/widgets").
-          with(query: { access_token: access_token, after: "456-789" }).
+          with(query: { access_token: access_token, limit: limit, after: "456-789" }).
           to_return(body: { widgets: [ ] }.to_json)
 
         expect(gateway.json_index).to be_kind_of(Enumerator)

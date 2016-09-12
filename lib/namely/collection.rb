@@ -17,6 +17,7 @@ module Namely
       resource_gateway.json_index.map { |model| build(model) }
     end
 
+    # @return [Enumerator]
     def raw_all
       resource_gateway.json_index
     end
