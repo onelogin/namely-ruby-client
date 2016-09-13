@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -312,7 +312,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:24:47 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=df750f2b-6ec6-4852-9407-2b1a4173bd3e
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=df750f2b-6ec6-4852-9407-2b1a4173bd3e&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -571,7 +571,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:24:54 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=bd8fdba3-e915-461a-a65c-c9a58f860956
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=bd8fdba3-e915-461a-a65c-c9a58f860956&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -727,7 +727,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:25:01 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=a129c608-bec1-47eb-bf89-7eeb721c66b4
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=a129c608-bec1-47eb-bf89-7eeb721c66b4&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -873,7 +873,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:25:08 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=b156132f-7548-4331-8cbf-7a0b42670c1d
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=b156132f-7548-4331-8cbf-7a0b42670c1d&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -1023,7 +1023,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:25:15 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=83e1d31a-6964-4e6a-9618-a35ea3ea2820
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=83e1d31a-6964-4e6a-9618-a35ea3ea2820&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -1169,7 +1169,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:25:23 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=9ca99415-dec6-484e-9ceb-5c1fd447b8ef
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=9ca99415-dec6-484e-9ceb-5c1fd447b8ef&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -1323,7 +1323,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:25:31 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=930b65fc-1baa-4687-9c6f-8a18df05d9be
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=930b65fc-1baa-4687-9c6f-8a18df05d9be&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -1467,7 +1467,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:25:39 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=61e9e42b-1b9c-4eef-802f-560ead0d980b
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=61e9e42b-1b9c-4eef-802f-560ead0d980b&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -1640,7 +1640,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:25:46 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=94f0b29d-84e3-4875-b4f0-f00aa5d6a323
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=94f0b29d-84e3-4875-b4f0-f00aa5d6a323&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -1781,7 +1781,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:25:54 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=7c305bc0-d6c0-4e26-8b55-341196a15c78
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=7c305bc0-d6c0-4e26-8b55-341196a15c78&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -1929,7 +1929,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:26:01 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=a20dfdc9-c5c5-4a1d-817a-0e2319baa8ca
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=a20dfdc9-c5c5-4a1d-817a-0e2319baa8ca&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -2082,7 +2082,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:26:08 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=077fe93c-2338-48f9-8227-165097fe5994
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=077fe93c-2338-48f9-8227-165097fe5994&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''
@@ -2184,7 +2184,7 @@ http_interactions:
   recorded_at: Wed, 21 Oct 2015 19:26:10 GMT
 - request:
     method: get
-    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=dbce5fdc-e264-419c-b9ac-0d41044d5e0f
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&after=dbce5fdc-e264-419c-b9ac-0d41044d5e0f&limit=<LIMIT>
     body:
       encoding: US-ASCII
       string: ''

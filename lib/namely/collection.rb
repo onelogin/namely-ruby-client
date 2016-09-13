@@ -14,7 +14,12 @@ module Namely
     #
     # @return [Array<Model>]
     def all
-      resource_gateway.json_index.map { |model| build(model) }
+      raw_all.map { |model| build(model) }
+    end
+
+    # @return [Enumerator]
+    def raw_all
+      resource_gateway.json_index
     end
 
     # Instantiate (but don't save) a new Model with the given attributes.
