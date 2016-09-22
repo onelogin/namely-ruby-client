@@ -9,6 +9,10 @@ module Namely
       @paged = options.fetch(:paged, false)
     end
 
+    def index_meta
+      get("/#{endpoint}", per_page: 1)['meta']
+    end
+
     def json_index
       paged ? json_index_paged : json_index_all
     end

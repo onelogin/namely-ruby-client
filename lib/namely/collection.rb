@@ -22,6 +22,17 @@ module Namely
       resource_gateway.json_index
     end
 
+    # Returns index metadata
+    #
+    # Responds to:
+    # count => total amount of available requesting resources
+    # status => response status code
+    #
+    # @return [OpenStruct]
+    def metadata
+      OpenStruct.new(resource_gateway.index_meta)
+    end
+
     # Instantiate (but don't save) a new Model with the given attributes.
     #
     # @param [Hash] attributes the attributes of the model being built.
