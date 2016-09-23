@@ -62,6 +62,11 @@ describe "integration tests" do
     )
 
     it_behaves_like(
+      "a resource with an index metadata action",
+      [:count, :status]
+    )
+
+    it_behaves_like(
       "a resource with a show action",
       id: "20332458-c1fe-412f-bcb8-01622f04a35d",
       first_name: "Leighton",
