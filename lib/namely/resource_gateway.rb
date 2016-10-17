@@ -17,6 +17,11 @@ module Namely
       paged ? json_index_paged : json_index_all
     end
 
+    def json_index_page(page: 1, per_page: limit, options: {})
+      params = { per_page: per_page, page: page }.merge(options)
+      get("/#{endpoint}", params)[resource_name]
+    end
+
     def json_show(id)
       get("/#{endpoint}/#{id}")[resource_name].first
     end
@@ -43,9 +48,14 @@ module Namely
       get("/#{endpoint}", limit: :all)[resource_name]
     end
 
+    def per_page
+      Namely.configuration.limit
+    end
+    alias limit per_page
+
     def json_index_paged
       Enumerator.new do |y|
-        params = { limit: Namely.configuration.limit }
+        params = { limit: per_page }
 
         loop do
           objects = get("/#{endpoint}", params)[resource_name]

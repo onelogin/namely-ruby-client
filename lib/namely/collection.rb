@@ -18,8 +18,8 @@ module Namely
     end
 
     # @return [Enumerator]
-    def raw_all
-      resource_gateway.json_index
+    def raw_all(options = {})
+      resource_gateway.json_index_page(options)
     end
 
     # Returns index metadata
