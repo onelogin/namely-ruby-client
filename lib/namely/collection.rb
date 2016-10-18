@@ -14,7 +14,7 @@ module Namely
     #
     # @return [Array<Model>]
     def all
-      raw_all.map { |model| build(model) }
+      resource_gateway.json_index.map { |model| build(model) }
     end
 
     # @return [Enumerator]
