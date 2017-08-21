@@ -18,8 +18,12 @@ module Namely
     end
 
     def json_index_page(page: 1, per_page: limit, options: {})
-      params = { per_page: per_page, page: page }.merge(options)
-      get("/#{endpoint}", params)[resource_name]
+      if options[:bulk]
+        json_index
+      else
+        params = { per_page: per_page, page: page }.merge(options)
+        get("/#{endpoint}", params)[resource_name]
+      end
     end
 
     def json_show(id)
