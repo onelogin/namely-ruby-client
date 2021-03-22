@@ -68,7 +68,7 @@ module Namely
     #
     # @return [Collection]
     def profiles
-      collection("profiles", paged: true)
+      collection("profiles")
     end
 
     # Return a Collection of reports.
