@@ -81,14 +81,14 @@ module Namely
     # Return a Collection of group types.
     #
     # @return [Collection]
-    def group_types
+    def jiawanggroup_types
       collection("group_types")
     end
 
     # Return a Collection of groups.
     #
     # @return [Collection]
-    def groups
+    def jiawnggroups
       collection("groups")
     end
 
