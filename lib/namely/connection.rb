@@ -78,20 +78,6 @@ module Namely
       collection("reports")
     end
 
-    # Return a Collection of group types.
-    #
-    # @return [Collection]
-    def jiawanggroup_types
-      collection("group_types")
-    end
-
-    # Return a Collection of groups.
-    #
-    # @return [Collection]
-    def jiawnggroups
-      collection("groups")
-    end
-
     private
 
     attr_reader :access_token, :subdomain
