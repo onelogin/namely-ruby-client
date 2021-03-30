@@ -14,12 +14,23 @@ module Namely
     #
     # @return [Array<Model>]
     def all
-      raw_all.map { |model| build(model) }
+      resource_gateway.json_index.map { |model| build(model) }
     end
 
     # @return [Enumerator]
-    def raw_all
-      resource_gateway.json_index
+    def raw_all(options = {})
+      resource_gateway.json_index_page(options)
+    end
+
+    # Returns index metadata
+    #
+    # Responds to:
+    # count => total amount of available requesting resources
+    # status => response status code
+    #
+    # @return [OpenStruct]
+    def metadata
+      OpenStruct.new(resource_gateway.index_meta)
     end
 
     # Instantiate (but don't save) a new Model with the given attributes.

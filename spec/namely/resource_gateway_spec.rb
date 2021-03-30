@@ -30,6 +30,27 @@ describe Namely::ResourceGateway do
     "this-is-not-a-valid-id"
   end
 
+  describe '#index_meta' do
+    it 'returns the parsed JSON representation of #index metadata' do
+      stub_request(
+        :get,
+        "https://#{subdomain}.namely.com/api/v1/widgets"
+      ).with(
+        query: {
+          access_token: access_token,
+          per_page: 1
+        }
+      ).to_return(
+        body: "{\"widgets\":[\"woo!\"],\"meta\":{\"count\":10,\"status\":200}}",
+        status: 200
+      )
+
+      expected_data = { 'count' => 10, 'status' => 200 }
+
+      expect(gateway.index_meta).to eq expected_data
+    end
+  end
+
   describe "#json_index" do
     it "returns the parsed JSON representation of #index" do
       stub_request(
@@ -77,6 +98,26 @@ describe Namely::ResourceGateway do
 
         expect(ids).to eq(['123-456', '456-789'])
       end
+    end
+  end
+
+  describe '#json_index_page' do
+    it "returns the parsed page of json index" do
+      stub_request(
+        :get,
+        "https://#{subdomain}.namely.com/api/v1/widgets"
+      ).with(
+        query: {
+          access_token: access_token,
+          page: 1,
+          per_page: 1
+        }
+      ).to_return(
+        body: "{\"widgets\": [\"woo!\"]}",
+        status: 200
+      )
+
+      expect(gateway.json_index_page(page: 1, per_page: 1)).to eq ["woo!"]
     end
   end
 

@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<TEST_SUBDOMAIN>.namely.com/api/v1/profiles?access_token=<TEST_ACCESS_TOKEN>&per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.6.0 x86_64) ruby/2.3.0p0
+      Host:
+      - "<TEST_SUBDOMAIN>.namely.com"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy-Report-Only:
+      - default-src https://* 'unsafe-inline' 'unsafe-eval'; connect-src https://*
+        'unsafe-inline' 'unsafe-eval'; font-src https://* 'unsafe-inline' 'unsafe-eval';
+        frame-src https://*; img-src https://* data:; media-src https://* 'unsafe-inline'
+        'unsafe-eval'; object-src https://* 'unsafe-inline' 'unsafe-eval'; script-src
+        https://* 'unsafe-inline' 'unsafe-eval'; style-src https://* 'unsafe-inline'
+        'unsafe-eval';
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 22 Sep 2016 08:02:56 GMT
+      Etag:
+      - W/"13bc96a046eb20047f28a8f3583bf619"
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - a0344045-bdbe-4e1b-9065-903652a5ab3a
+      X-Runtime:
+      - 0.<LIMIT>8556
+      X-Xss-Protection:
+      - '1'
+      Content-Length:
+      - '1125'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7VW3W/bNhD/VwQ9R64kS5aVp3Zdi2Jb2gBdn4pAoKiTzUUi
+        BYpK5xX+33tH6svOgvVlRhSQv7vjfR/53e+0qkUDvX/79bsvKv/W38O+hJpn
+        QbXbZkFS13mQZywKqjznKS+jus5q/8aHlokG2bsNvI4adRByw1WLhFro3hSS
+        tYDUezY0iDVsgd7hGqGhB130hpkBdfuMG/EEBHcVM1AVzPi3UZKGSZLmcX7j
+        cw0rHMFsm4fxDdoPNWiNlPH4X1Tf4zmiZQfcyqFp0CT8v6Z7ow1/qbIwwjSI
+        j86H4TbM9uR3zvdBEvIyyMOwDiLAPeySOoliFByF/C/yUapv0vtNld6fFjvf
+        +Bo6pU1fGLUEVariMODqKjwfVamq01WAZnAK8Ucl8eAHArpGnQAKc+qszZMd
+        79FBNKC1+hshH3ui/j/uHbQaOqoXNMgAa+2ScJAVaJS6Yw1lsmVaGNYsOb5j
+        WgugGPS9xH22j8M4TH2KWD+0c7ZaUVUNTNH4MOaJH5k8QIFl0CuSvteqVUbg
+        Gs8zTJuCCgcJcRilQRQGcYaUCjokDRpW1CyI4iCO/FU8bXBwV8ihLbEuo3iL
+        5A406kIX5lrHat6gAeY1ZmRd85UqkRzleWjP3iFUCmWrTUsPd6zvwRQtk1iV
+        LUgs4q/+H6wzqkPiW8Ds3R8pyw9UCgQXTsLZgweN6GQfSnGlsc7Qq4IzXS2c
+        b/8NtxKPcCoMOyysv18AloeKByohi0GTx0djuttXrxy6mf1VdS04oD/IOJ/2
+        yYIegd7qxJG3Eho4JkmwZuF1oEfgmrezscCAxtsgSXdBtg/yfCHX7G/KZIyR
+        xi+K8G8hooEdk6eiVaWwRbzdbgP6Jr6jahcNSZIE9E1EJzWT0zQN6FvLUjOx
+        qsKa7SNbUN4defyZBsqIx4i/6YxHRcSFOdFWYwwPZipXM9bc3RubyUEafXLI
+        l8+I/CM66tY4yRJqOefapWLXK4tCt3fa3HpRM9JWahxi1bjl6DFtztQYoLGf
+        +QnDKQ0OZ7Rm535RFLnWueKYYxZv832y3+cZZYwPOJulKaiDK+i5Fp3t2clE
+        aKgoDOA4HqGXOFnD9IlCcAKmm1PBWnJn9s3qQWvcZHSga3m31qu1ncSTq0dg
+        jTliq9j4liABYy2sLv/dOB+8T7KhgTzp9Lch/Tah/0wz5u9X/+LYQsiaRsGH
+        GfEsQsMJI9c8V/ueteJSX/of2txJkya3s1q83misO5R8Ej2Gs+gaJic+B3kE
+        XTE3oia7+0EzyWcPCPVm9EpknqU4p6tSqccp2jPhG86+whyhxlrR8IRGkkG2
+        uGwucPa1YBjFgzu/49RVMV0fcRiu77bp3bK5uOTGqMxYT8GZWcc3wczmHj5r
+        julum1lGYM0z3nkzi9ufz9PsvLh5V++qn7x78b6ihnEieVwD50mQVlWIc6oM
+        A5ZkWcD4rk6zdAt8RyPm5ev62WPADuqfOvZM+Ziehg8vXfvnH4dnBDJCCgAA
+    http_version: 
+  recorded_at: Thu, 22 Sep 2016 08:02:56 GMT
+recorded_with: VCR 3.0.3
